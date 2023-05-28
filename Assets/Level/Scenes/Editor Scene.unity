@@ -488,7 +488,7 @@ SortingGroup:
   m_Enabled: 1
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 999
+  m_SortingOrder: 987
 --- !u!54 &1958999415
 Rigidbody:
   m_ObjectHideFlags: 0
