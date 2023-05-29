@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5088951042997453954}
   - component: {fileID: 7024315019490193480}
   - component: {fileID: 5088951042997453980}
-  - component: {fileID: 5088951042997453955}
+  - component: {fileID: 3469287837663456625}
   m_Layer: 0
   m_Name: Player Pouch
   m_TagString: Untagged
@@ -102,8 +102,8 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &5088951042997453955
-MeshCollider:
+--- !u!65 &3469287837663456625
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -112,7 +112,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 8479549494945012600, guid: a6f3365039410664ca51b1299903df73, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.047037132, y: 0.047039825, z: 0.054768626}
+  m_Center: {x: -0.00005229562, y: 0, z: 0.026437411}
