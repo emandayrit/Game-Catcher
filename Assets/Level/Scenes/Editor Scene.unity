@@ -991,6 +991,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 2.220446e-16, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1299148953 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1299148953, guid: 20a4f0ad7295de945b94c7b03a9834fe, type: 3}
+  m_PrefabInstance: {fileID: 8555419730665859564}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1299148958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299148953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59bd370b689a9aa4b91e287eec900f4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1487677670
 GameObject:
   m_ObjectHideFlags: 0
@@ -1300,6 +1317,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: coin
       objectReference: {fileID: 0}
+    - target: {fileID: 423646384729833246, guid: 2f65f3c1495325a4badb028c7eb1e61a, type: 3}
+      propertyPath: m_TagString
+      value: Coin
+      objectReference: {fileID: 0}
+    - target: {fileID: 657650845164110770, guid: 2f65f3c1495325a4badb028c7eb1e61a, type: 3}
+      propertyPath: m_Drag
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 657650845164110770, guid: 2f65f3c1495325a4badb028c7eb1e61a, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1056877552947389860, guid: 2f65f3c1495325a4badb028c7eb1e61a, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1369,6 +1398,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bomb
       objectReference: {fileID: 0}
+    - target: {fileID: 5851629145182550668, guid: 5eadb8b2c03cbc9469b4f1e72eaf8695, type: 3}
+      propertyPath: m_TagString
+      value: Bomb
+      objectReference: {fileID: 0}
     - target: {fileID: 6520923195466178614, guid: 5eadb8b2c03cbc9469b4f1e72eaf8695, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1429,6 +1462,14 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7913144011791200148, guid: 5eadb8b2c03cbc9469b4f1e72eaf8695, type: 3}
+      propertyPath: m_Drag
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7913144011791200148, guid: 5eadb8b2c03cbc9469b4f1e72eaf8695, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5eadb8b2c03cbc9469b4f1e72eaf8695, type: 3}
 --- !u!1001 &8555419730665859564
@@ -1438,6 +1479,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1299148954, guid: 20a4f0ad7295de945b94c7b03a9834fe, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8156104238707542823, guid: 20a4f0ad7295de945b94c7b03a9834fe, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -1486,5 +1531,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Pouch
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3935730024843852944, guid: 20a4f0ad7295de945b94c7b03a9834fe, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 20a4f0ad7295de945b94c7b03a9834fe, type: 3}

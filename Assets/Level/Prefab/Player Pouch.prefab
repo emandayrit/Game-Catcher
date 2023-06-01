@@ -67,6 +67,7 @@ GameObject:
   - component: {fileID: 7024315019490193480}
   - component: {fileID: 5088951042997453980}
   - component: {fileID: 3469287837663456625}
+  - component: {fileID: 3935730024843852944}
   - component: {fileID: 8555419730665859566}
   m_Layer: 0
   m_Name: Player Pouch
@@ -171,6 +172,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.04, y: 0.060000002, z: 0.03}
   m_Center: {x: 0, y: 0, z: 0.015}
+--- !u!65 &3935730024843852944
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8825820771516993949}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.03, y: 0.03, z: 0.02}
+  m_Center: {x: 0, y: 0, z: 0.04}
 --- !u!114 &8555419730665859566
 MonoBehaviour:
   m_ObjectHideFlags: 0
