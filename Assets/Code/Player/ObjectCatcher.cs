@@ -1,19 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ObjectCatcher : MonoBehaviour
 {
+    [SerializeField] UnityEvent scoreCatcher, bombCatcher;
+
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Coin"))
         {
-            Debug.Log($"Your score: {1}");
+            scoreCatcher.Invoke();
         }
         if (other.gameObject.CompareTag("Bomb"))
         {
-            Debug.Log($"You catch a bomb! {true}");
+            bombCatcher.Invoke();
         }
         Destroy(other.gameObject);
     }
+
 }
