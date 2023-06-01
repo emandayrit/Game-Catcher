@@ -2,15 +2,13 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] float xSpeed, xInput;
+    [SerializeField] float xSpeed;
 
-    void Update()
-    {
-        xInput = Input.GetAxis("Horizontal");
-    }
 
     void FixedUpdate()
     {
-        GetComponent<Rigidbody>().velocity = new Vector3(xInput * xSpeed, 0, 0) * Time.deltaTime;
+        Vector3 directionControl = new Vector3(Input.GetAxis("Horizontal") * xSpeed, 0, 0);
+
+        GetComponent<Rigidbody>().velocity = directionControl * Time.deltaTime;
     }
 }
