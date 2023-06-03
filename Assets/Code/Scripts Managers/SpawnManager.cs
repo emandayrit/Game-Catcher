@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    [SerializeField] GameObject coinPrefab;
-    [SerializeField] GameObject bombPrefab;
+    [SerializeField] List<GameObject> collectibleObjects;
 
     [SerializeField] float spawnXRange;
     [SerializeField] float spawnYLimiter;
@@ -20,13 +19,21 @@ public class SpawnManager : MonoBehaviour
     {
         while (!GetComponent<GameOverManager>().IsGameOver)
         {
-            yield return MakeObject();
+            yield return GetObject(GetRandomPrefab());
             yield return new WaitForSeconds(prefabSpawnInSeconds);
         }
     }
-    GameObject MakeObject()
+
+    GameObject GetRandomPrefab()
+    {
+        int _percentageChecker = Random.Range(0, collectibleObjects.Count);
+        return collectibleObjects[_percentageChecker];
+    }
+
+    GameObject GetObject(GameObject returnedPrefab)
     {
         float randomXRange = Random.Range(-spawnXRange, spawnXRange);
-        return Instantiate(coinPrefab,new Vector3(randomXRange,spawnYLimiter,0),Quaternion.identity);
+        return Instantiate(returnedPrefab,new Vector3(randomXRange,spawnYLimiter,0),Quaternion.identity);
     }
+
 }
