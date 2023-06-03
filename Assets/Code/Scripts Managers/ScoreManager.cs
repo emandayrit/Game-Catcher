@@ -7,6 +7,7 @@ public class ScoreManager : MonoBehaviour
 {
     [SerializeField] int score;
     [SerializeField] Text scoreText;
+    [SerializeField] ParticleSystem goldReceievedVFX;
 
     private void Start()
     {
@@ -18,5 +19,9 @@ public class ScoreManager : MonoBehaviour
     {
         Debug.Log($"Your score: {++score}");
         scoreText.text = "Score: " + score.ToString();
+
+        // Checks and plays if VFX prefab is exist
+        if (goldReceievedVFX)
+            goldReceievedVFX.Play();
     }
 }
