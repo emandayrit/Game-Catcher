@@ -4,7 +4,7 @@ public class GameOverManager : MonoBehaviour
 {
     public bool IsGameOver;
 
-    [SerializeField] PlayerMovement playerMovement;
+    [SerializeField] HorizontalMovement playerMovement;
     [SerializeField] SpawnManager spawnManager;
 
     public void GameOverCall()

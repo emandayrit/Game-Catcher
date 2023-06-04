@@ -10,4 +10,6 @@ public class ScoreManager : MonoBehaviour
     {
         Debug.Log($"Your score: {++score}");
     }
+
+
 }
