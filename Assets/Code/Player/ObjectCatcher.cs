@@ -11,10 +11,12 @@ public class ObjectCatcher : MonoBehaviour
         {
             scoreCatcher.Invoke();
         }
+
         if (other.gameObject.CompareTag("Bomb"))
         {
             bombCatcher.Invoke();
         }
+
         Destroy(other.gameObject);
     }
 
