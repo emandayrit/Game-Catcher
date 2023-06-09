@@ -3,18 +3,21 @@ using UnityEngine.Events;
 
 public class ObjectCatcher : MonoBehaviour
 {
-    [SerializeField] UnityEvent scoreCatcher, bombCatcher;
+    [SerializeField] UnityEvent coinTrigger;
+    [SerializeField] UnityEvent bombTrigger;
 
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Coin"))
         {
-            scoreCatcher.Invoke();
+            coinTrigger.Invoke();
         }
+
         if (other.gameObject.CompareTag("Bomb"))
         {
-            bombCatcher.Invoke();
+            bombTrigger.Invoke();
         }
+
         Destroy(other.gameObject);
     }
 

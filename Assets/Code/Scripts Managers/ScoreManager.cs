@@ -15,7 +15,7 @@ public class ScoreManager : MonoBehaviour
         scoreText.text = "Score: " + score.ToString();
     }
 
-    public void ScoreCall()
+    public void AddScore()
     {
         Debug.Log($"Your score: {++score}");
         scoreText.text = "Score: " + score.ToString();

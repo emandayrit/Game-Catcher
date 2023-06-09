@@ -155,7 +155,7 @@ Transform:
   - {fileID: 272516535}
   - {fileID: 658357195}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &225697243
 GameObject:
@@ -321,6 +321,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &308983493
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 308983496}
+  - component: {fileID: 308983495}
+  m_Layer: 0
+  m_Name: Game Status Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &308983495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308983493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f50e219c65929240b951da7d762b4d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsGameOver: 0
+  playerMovement: {fileID: 8555419730665859566}
+  spawnManager: {fileID: 1605745295}
+--- !u!4 &308983496
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308983493}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &433406614
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,7 +462,7 @@ RectTransform:
   m_Children:
   - {fileID: 461559046}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1244,7 +1291,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1120568296
 Rigidbody:
@@ -1335,7 +1382,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1487677670
 GameObject:
@@ -1431,10 +1478,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1605745294}
   - component: {fileID: 1605745295}
-  - component: {fileID: 1605745297}
-  - component: {fileID: 1605745298}
   m_Layer: 0
-  m_Name: Game Manager
+  m_Name: Spawn Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1467,41 +1512,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a20b51883c2720b4c9e8320b5537a11e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinPrefab: {fileID: 423646384729833246, guid: 2f65f3c1495325a4badb028c7eb1e61a, type: 3}
-  bombPrefab: {fileID: 5851629145182550668, guid: 5eadb8b2c03cbc9469b4f1e72eaf8695, type: 3}
-  spawnXRange: 7
-  spawnYLimiter: 8
-  prefabSpawnInSeconds: 2
---- !u!114 &1605745297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1605745292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f50e219c65929240b951da7d762b4d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsGameOver: 0
-  playerMovement: {fileID: 8555419730665859566}
-  spawnManager: {fileID: 1605745295}
---- !u!114 &1605745298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1605745292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6caeecc1605b32545a13a366a2ba3b11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: 0
-  scoreText: {fileID: 225697244}
-  goldReceievedVFX: {fileID: 822551896}
+  collectibleObjects:
+  - {fileID: 5851629145182550668, guid: 5eadb8b2c03cbc9469b4f1e72eaf8695, type: 3}
+  - {fileID: 423646384729833246, guid: 2f65f3c1495325a4badb028c7eb1e61a, type: 3}
+  xSpawnRange: 7
+  ySpawnHeight: 8
+  spawnInSeconds: 2
 --- !u!1 &1677498276
 GameObject:
   m_ObjectHideFlags: 0
@@ -1615,7 +1631,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1880550541
 GameObject:
@@ -1683,7 +1699,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2041329655
 GameObject:
@@ -1769,6 +1785,53 @@ Transform:
   m_Father: {fileID: 658357195}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2050495829
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2050495831}
+  - component: {fileID: 2050495830}
+  m_Layer: 0
+  m_Name: Score Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2050495830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050495829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6caeecc1605b32545a13a366a2ba3b11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 76
+  scoreText: {fileID: 225697244}
+  goldReceievedVFX: {fileID: 822551896}
+--- !u!4 &2050495831
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050495829}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &8555419730665859564
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1777,16 +1840,72 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1299148958, guid: 20a4f0ad7295de945b94c7b03a9834fe, type: 3}
+      propertyPath: bombTrigger.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1299148958, guid: 20a4f0ad7295de945b94c7b03a9834fe, type: 3}
+      propertyPath: coinTrigger.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1299148958, guid: 20a4f0ad7295de945b94c7b03a9834fe, type: 3}
+      propertyPath: bombTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1299148958, guid: 20a4f0ad7295de945b94c7b03a9834fe, type: 3}
+      propertyPath: coinTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1299148958, guid: 20a4f0ad7295de945b94c7b03a9834fe, type: 3}
       propertyPath: bombCatcher.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1605745297}
+      objectReference: {fileID: 0}
+    - target: {fileID: 1299148958, guid: 20a4f0ad7295de945b94c7b03a9834fe, type: 3}
+      propertyPath: bombTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 308983495}
+    - target: {fileID: 1299148958, guid: 20a4f0ad7295de945b94c7b03a9834fe, type: 3}
+      propertyPath: coinTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2050495830}
     - target: {fileID: 1299148958, guid: 20a4f0ad7295de945b94c7b03a9834fe, type: 3}
       propertyPath: scoreCatcher.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1605745298}
+      objectReference: {fileID: 0}
+    - target: {fileID: 1299148958, guid: 20a4f0ad7295de945b94c7b03a9834fe, type: 3}
+      propertyPath: bombTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1299148958, guid: 20a4f0ad7295de945b94c7b03a9834fe, type: 3}
+      propertyPath: coinTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1299148958, guid: 20a4f0ad7295de945b94c7b03a9834fe, type: 3}
+      propertyPath: bombTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GameOverCall
+      objectReference: {fileID: 0}
+    - target: {fileID: 1299148958, guid: 20a4f0ad7295de945b94c7b03a9834fe, type: 3}
+      propertyPath: coinTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ScoreCall
+      objectReference: {fileID: 0}
+    - target: {fileID: 1299148958, guid: 20a4f0ad7295de945b94c7b03a9834fe, type: 3}
+      propertyPath: bombTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameOverManager, Code
+      objectReference: {fileID: 0}
+    - target: {fileID: 1299148958, guid: 20a4f0ad7295de945b94c7b03a9834fe, type: 3}
+      propertyPath: coinTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ScoreManager, Code
+      objectReference: {fileID: 0}
+    - target: {fileID: 1299148958, guid: 20a4f0ad7295de945b94c7b03a9834fe, type: 3}
+      propertyPath: bombTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1299148958, guid: 20a4f0ad7295de945b94c7b03a9834fe, type: 3}
+      propertyPath: coinTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8156104238707542823, guid: 20a4f0ad7295de945b94c7b03a9834fe, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8156104238707542823, guid: 20a4f0ad7295de945b94c7b03a9834fe, type: 3}
       propertyPath: m_LocalPosition.x
