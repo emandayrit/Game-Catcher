@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class MovementHandler : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] float xSpeed;
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        Vector3 directionControl = new Vector3(Input.GetAxis("Horizontal") * xSpeed, 0, 0);
+        GetComponent<Rigidbody>().velocity = directionControl * Time.deltaTime;
     }
 }
