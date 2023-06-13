@@ -13,8 +13,6 @@ GameObject:
   - component: {fileID: 657650845164110771}
   - component: {fileID: 657650845164110770}
   - component: {fileID: 1463339269}
-  - component: {fileID: -7092894851142512990}
-  - component: {fileID: -5463651593168532775}
   m_Layer: 0
   m_Name: coin
   m_TagString: Coin
@@ -118,36 +116,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-7092894851142512990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 423646384729833246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f4d7a6446691c34a88d565e80a911e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collectibleValue: 2
-  collectibleType: 0
---- !u!114 &-5463651593168532775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 423646384729833246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0936b7e82a9c085448586fcd3c9fce34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soEventHandler: {fileID: 11400000, guid: 0045f0f1e53fb64459f7c5692a03382e, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &4432254109375038348
 GameObject:
   m_ObjectHideFlags: 0
