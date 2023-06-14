@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName ="Scriptable Object/Event Handler")]
-public class SOEvent : ScriptableObject
+public class ScoreEventHandler : ScriptableObject
 {
     public List<EventListener> listeners = new List<EventListener>();
 

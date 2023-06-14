@@ -3,7 +3,7 @@ using UnityEngine.Events;
 
 public class EventListener : MonoBehaviour
 {
-    public SOEvent soEventHandler;
+    public ScoreEventHandler soEventHandler;
     public UnityEvent response;
 
     private void OnEnable()
