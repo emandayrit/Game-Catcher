@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Coin
   - Bomb
-  - Ground
   layers:
   - Default
   - TransparentFX
