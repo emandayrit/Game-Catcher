@@ -10,6 +10,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e11391c881ab8974d9ecaea0e2805abb, type: 3}
-  m_Name: ScoreEvent
-  m_EditorClassIdentifier: 
-  listeners: []
+  m_Name: ScoreEventHandler
+  m_EditorClassIdentifier:
