@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: CoinSO
   m_EditorClassIdentifier: 
   value: 2
-  vfx: {fileID: 7122831240905174443, guid: 67dfe5516992a72459b47d45468d1d6f, type: 3}
+  vfxTimer: 1
+  vfx: {fileID: 7122831240905174438, guid: 67dfe5516992a72459b47d45468d1d6f, type: 3}
