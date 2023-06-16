@@ -6,14 +6,13 @@ public class ScoreHandler : MonoBehaviour
     [SerializeField] TMP_Text scoreText;
     [SerializeField] int currentScore;
 
-    private void OnEnable()
-    {
-        Collectibles.coinCollect += UpdateScoreText;
-    }
+    private void OnEnable() =>Collectibles.coinCollect += UpdateScoreText;
 
-    void UpdateScoreText(int score)
+    private void OnDisable() =>Collectibles.coinCollect -= UpdateScoreText;
+
+    void UpdateScoreText(int _score)
     {
-        currentScore += score;
+        currentScore += _score;
         scoreText.text = $"Score: {currentScore}";
     }
 }
