@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class MovementHandler : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float xSpeed;
 
