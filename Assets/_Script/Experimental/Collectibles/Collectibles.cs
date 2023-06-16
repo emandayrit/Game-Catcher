@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Collectibles : MonoBehaviour
 {
-    [SerializeField] int value;
+    [SerializeField] CollectibleValues collectible;
 
     private void OnCollisionEnter(Collision other)
     {
@@ -10,6 +10,7 @@ public class Collectibles : MonoBehaviour
         {
             //increase game score points if this a coin.
             //decrease player HP if this is a bomb.
+            Debug.Log($"This collectible value is: {collectible.value}");
         }
 
         Destroy(gameObject);
