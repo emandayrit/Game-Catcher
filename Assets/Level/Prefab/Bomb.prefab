@@ -129,5 +129,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f4d7a6446691c34a88d565e80a911e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectibleValue: 1
-  collectibleType: 1
+  collectible: {fileID: 11400000, guid: ac245711d05ecfd4093370320361618d, type: 2}
