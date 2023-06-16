@@ -4,8 +4,8 @@ public class PlayerCollector : MonoBehaviour
 {
     [SerializeField] CapsuleCollider playerColliderCollector;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log($"{other.name} touches {playerColliderCollector.name}");
+        Debug.Log($"{collision.gameObject.name} touches {playerColliderCollector.name}");
     }
 }
