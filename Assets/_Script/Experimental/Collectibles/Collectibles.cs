@@ -1,10 +1,8 @@
 using UnityEngine;
 
-enum CollectibleType { good,bad }
-public class CollectibleHandler : MonoBehaviour
+public class Collectibles : MonoBehaviour
 {
-    [SerializeField] int collectibleValue;
-    [SerializeField] CollectibleType collectibleType;
+    [SerializeField] int value;
 
     private void OnCollisionEnter(Collision other)
     {
@@ -12,7 +10,6 @@ public class CollectibleHandler : MonoBehaviour
         {
             //increase game score points if this a coin.
             //decrease player HP if this is a bomb.
-            Debug.Log($"You caught {collectibleType} and it gives you {collectibleValue} points.");
         }
 
         Destroy(gameObject);
