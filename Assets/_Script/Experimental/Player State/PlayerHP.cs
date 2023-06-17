@@ -7,11 +7,13 @@ public class PlayerHP : MonoBehaviour
     [SerializeField] int currentHP;
 
     [SerializeField] TMP_Text hpText;
+    private GameObject gameOver;
 
     private void Start()
     {
         currentHP = maxHP;
         UpdateHPText(currentHP);
+        gameOver = GameObject.Find("/Game Status Manager");
     }
 
     private void OnEnable() => Collectibles.bombCollect += CheckCurrentHP;
@@ -25,7 +27,12 @@ public class PlayerHP : MonoBehaviour
 
         if (currentHP == 0)
         {
+            Debug.Log(gameOver);
             Debug.Log($"You died.");
+
+            // Checks if game object exists then gets the GameOverManager component to activate the game over
+            if (gameOver)
+                gameOver.GetComponent<GameOverManager>().GameOverCall();
         }
     }
 
