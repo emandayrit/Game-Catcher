@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour, ICollectable
+public class PlayerMovement : MonoBehaviour, IMoveable
 {
     [SerializeField] float xSpeed;
 

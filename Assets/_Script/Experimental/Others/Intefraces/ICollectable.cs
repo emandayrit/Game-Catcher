@@ -1,5 +1,5 @@
 
-public interface ICollectable
+public interface IMoveable
 {
     public void MoveSlow(int value);
 }

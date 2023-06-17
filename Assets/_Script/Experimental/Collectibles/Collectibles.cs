@@ -30,7 +30,7 @@ public class Collectibles : MonoBehaviour
     //To Move Slow when cancering an object -vincent
     void SlowModifier(Collision _collider)
     {
-        ICollectable _move = _collider.gameObject.GetComponent<ICollectable>();
+        IMoveable _move = _collider.gameObject.GetComponent<IMoveable>();
         _move.MoveSlow(collectible.value);
     }
 
