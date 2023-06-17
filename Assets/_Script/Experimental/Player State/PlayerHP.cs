@@ -25,11 +25,8 @@ public class PlayerHP : MonoBehaviour
         currentHP -= _hp;
         UpdateHPText(currentHP);
 
-        if (currentHP == 0)
+        if (currentHP <= 0)
         {
-            Debug.Log(gameOver);
-            Debug.Log($"You died.");
-
             // Checks if game object exists then gets the GameOverManager component to activate the game over
             if (gameOver)
                 gameOver.GetComponent<GameOverManager>().GameOverCall();

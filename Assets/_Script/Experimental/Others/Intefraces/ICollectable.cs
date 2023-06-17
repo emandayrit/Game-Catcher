@@ -1,7 +1,5 @@
 
-using UnityEditor.Rendering;
-
 public interface ICollectable
 {
-    void GetValue(int value);
+    public void MoveSlow(int value);
 }

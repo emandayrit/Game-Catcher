@@ -6,25 +6,33 @@ public class Collectibles : MonoBehaviour
     public static Action<int> coinCollect, bombCollect;
     [SerializeField] CollectibleValues collectible;
 
-    void OnCollisionEnter(Collision other)
+    void OnCollisionEnter(Collision _collider)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (_collider.gameObject.CompareTag("Player"))
         {
-            CheckCollisionTag(gameObject.tag);
-            collectible.PlayVFX(other.gameObject.transform);
+            CheckCollisionTag(gameObject.tag, _collider);
+            collectible.PlayVFX(_collider.gameObject.transform);
         }
 
         Destroy(gameObject);
     }
 
-    void CheckCollisionTag(string _tag)
+    void CheckCollisionTag(string _tag, Collision _collider)
     {
         switch (_tag)
         {
-            case "Coin": coinCollect?.Invoke(collectible.value); break;
+            case "Coin": SlowModifier(_collider); coinCollect?.Invoke(collectible.value); break;
             case "Bomb": bombCollect?.Invoke(collectible.value); break;
             default: break;
         }
     }
+
+    //To Move Slow when cancering an object -vincent
+    void SlowModifier(Collision _collider)
+    {
+        ICollectable _move = _collider.gameObject.GetComponent<ICollectable>();
+        _move.MoveSlow(collectible.value);
+    }
+
 
 }
