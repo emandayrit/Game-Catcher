@@ -19,4 +19,6 @@ public class GameOverManager : MonoBehaviour
         _gameOverPanel.SetActive(true);
         Time.timeScale = 0f;
     }
+
+    public void ReturnNormalSpeed() => Time.timeScale = 1f;
 }
