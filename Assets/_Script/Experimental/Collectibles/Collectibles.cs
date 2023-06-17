@@ -31,7 +31,7 @@ public class Collectibles : MonoBehaviour
     void SlowModifier(Collision _collider)
     {
         IMoveable _move = _collider.gameObject.GetComponent<IMoveable>();
-        _move.MoveSlow(collectible.value);
+        //_move.MoveSlow(collectible.value);
     }
 
 
