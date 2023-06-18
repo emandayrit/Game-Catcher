@@ -4,7 +4,7 @@ using UnityEngine;
 public class ScoreHandler : MonoBehaviour
 {
     [SerializeField] TMP_Text scoreText;
-    [SerializeField] int currentScore;
+    public int currentScore { get; private set; }
 
     private void OnEnable() =>Collectibles.coinCollect += UpdateScoreText;
 
