@@ -15,3 +15,4 @@ MonoBehaviour:
   value: 2
   vfxTimer: 1
   vfx: {fileID: 7122831240905174438, guid: 67dfe5516992a72459b47d45468d1d6f, type: 3}
+  clip: {fileID: 8300000, guid: 26eefd02b4a6e5a4d92ab208ce07796b, type: 3}
