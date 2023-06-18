@@ -5,15 +5,15 @@ public class PlayerHP : MonoBehaviour
 {
     [SerializeField] int maxHP;
     [SerializeField] int currentHP;
-
     [SerializeField] TMP_Text hpText;
-    private GameObject gameOver;
+
+    private GameOverHandler _gameOver;
 
     private void Start()
     {
         currentHP = maxHP;
         UpdateHPText(currentHP);
-        gameOver = GameObject.Find("/Game Status Manager");
+        _gameOver = GameObject.FindGameObjectWithTag("GameOver").GetComponent<GameOverHandler>();
     }
 
     private void OnEnable() => Collectibles.bombCollect += CheckCurrentHP;
@@ -22,14 +22,11 @@ public class PlayerHP : MonoBehaviour
 
     void CheckCurrentHP(int _hp)
     {
-        currentHP -= _hp;
-        UpdateHPText(currentHP);
+        UpdateHPText(currentHP -= _hp);
 
         if (currentHP <= 0)
         {
-            // Checks if game object exists then gets the GameOverManager component to activate the game over
-            if (gameOver)
-                gameOver.GetComponent<GameOverManager>().GameOverCall();
+            _gameOver.GameOverCall();
         }
     }
 

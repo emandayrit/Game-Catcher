@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Coin
   - Bomb
+  - GameOver
   layers:
   - Default
   - TransparentFX

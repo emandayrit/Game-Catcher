@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour, IMoveable
 
     public void MoveSlow(int value)
     {
-        xSpeed /= value; 
+        xSpeed /= 1.05f; 
     }
 
     void FixedUpdate()

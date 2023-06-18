@@ -253,7 +253,7 @@ GameObject:
   - component: {fileID: 308983495}
   m_Layer: 0
   m_Name: Game Status Manager
-  m_TagString: Untagged
+  m_TagString: GameOver
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -270,7 +270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f50e219c65929240b951da7d762b4d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameOverPanel: {fileID: 453376043}
+  gameOverPanel: {fileID: 453376043}
   IsGameOver: 0
 --- !u!4 &308983496
 Transform:
