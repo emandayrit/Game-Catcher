@@ -1,51 +1,65 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class LevelUp : MonoBehaviour
 {
-    [SerializeField] int currentLevel;
-    [SerializeField] int scoreToLevel;
     [SerializeField] GameObject levelUpPanel;
+    [SerializeField] PowerUps powerUps;
     [SerializeField] PlayerStats player;
+
+    private List<int> powerUpNumber;
 
     void Update()
     {
-        if(player.currentScore >= scoreToLevel)
+        if(player.currentScore >= player.scoreToLevel)
         {
-            IncreaseScoreToLevel();
-            LevelUpPanelStart();
+            StartLevelUp();
         }
     }
 
-    void LevelUpPanelStart()
+    void GetRandomPowerUps()
     {
-        Time.timeScale = 0f;
-        levelUpPanel.SetActive(true);
+        //get the 3 random power ups to show in the level up panel/UI.
+        powerUpNumber = powerUps.GetUniqueRandomNumber();
+        //How can I make this work?
+        //I wanted to use this List of int numbers from powerUpNumber to return the designated
     }
 
-    void IncreaseScoreToLevel()
+    #region Buttons Stuffs
+    public void PowerUpButtonOne()
     {
-        ++currentLevel;
-        scoreToLevel *= currentLevel;
-    }
-
-
-    public void Button1Pressed()
-    {
+        Debug.Log($"You Selected Power up 1!");
         //HP increase (max or current?)
-        Time.timeScale = 1f;
+        InitializeLevelUpUI(false, 1);
     }
 
-    public void Button2Pressed()
+    public void PowerUpButtonTwo()
     {
+        Debug.Log($"You Selected Power up 2!");
         //coin score multiplier?
-        Time.timeScale = 1f;
+        InitializeLevelUpUI(false, 1);
     }
 
-    public void Button3Pressed()
+    public void PowerUpButtonThree()
     {
+        Debug.Log($"You Selected Power up 3!");
         //player movement speed?
-        Time.timeScale = 1f;
+        InitializeLevelUpUI(false, 1);
     }
+    #endregion
+
+    #region Initialization Stuffs
+    void StartLevelUp()
+    {
+        InitializeLevelUpUI(true, 0);
+
+        player.UpdateStatsOnLevelUp();
+    }
+
+    void InitializeLevelUpUI(bool _status, int _time)
+    {
+        levelUpPanel.SetActive(_status);
+        Time.timeScale = _time;
+    }
+    #endregion
 }

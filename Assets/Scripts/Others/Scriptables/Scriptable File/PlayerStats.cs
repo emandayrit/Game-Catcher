@@ -13,7 +13,7 @@ public class PlayerStats : ScriptableObject
     public float moveSpeed;
     public GameObject player;
 
-    public void InitializePlayer()
+    public void ResetPlayerStats()
     {
         level = 1;
         currentScore = 0;
@@ -23,5 +23,15 @@ public class PlayerStats : ScriptableObject
         currentHP = maxHP;
 
         moveSpeed = 1000;
+    }
+
+    public void UpdateStatsOnLevelUp()
+    {
+        ++level;
+        scoreToLevel += currentScore;
+        currentHP = maxHP;
+
+        moveSpeed = 1000;
+        currentScore = 0;
     }
 }

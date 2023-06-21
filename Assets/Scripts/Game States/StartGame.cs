@@ -14,7 +14,7 @@ public class StartGame : MonoBehaviour
 
     void InitializePlayer()
     {
-        playerStats.InitializePlayer();
+        playerStats.ResetPlayerStats();
         
         GameObject _player = Instantiate(playerStats.player,playerParent.transform);
         _player.name = "Player";
