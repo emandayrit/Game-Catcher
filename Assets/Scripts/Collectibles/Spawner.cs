@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnerHandler : MonoBehaviour
+public class Spawner : MonoBehaviour
 {
-    [SerializeField] List<GameObject> collectibleObjects;
+    [SerializeField] List<GameObject> collectibles;
 
     float XSpawnRange = 7f;
     float YSpawnHeight = 8f;
@@ -17,8 +17,8 @@ public class SpawnerHandler : MonoBehaviour
     GameObject MakeObject()
     {
         Vector3 _randPos = new Vector3(Random.Range(-XSpawnRange, XSpawnRange), YSpawnHeight, 0);
-        int _randCount = Random.Range(0, collectibleObjects.Count);
+        int _randCount = Random.Range(0, collectibles.Count);
 
-        return Instantiate(collectibleObjects[_randCount], _randPos, Quaternion.identity);
+        return Instantiate(collectibles[_randCount], _randPos, Quaternion.identity);
     }
 }

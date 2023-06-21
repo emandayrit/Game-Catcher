@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4411e7b81d8c9dd44a88e2768a8eed75, type: 3}
+  m_Name: MainPlayer
+  m_EditorClassIdentifier: 
+  level: 1
+  currentScore: 0
+  scoreToLevel: 4
+  maxHP: 5
+  currentHP: 5
+  moveSpeed: 863.8377
+  player: {fileID: 8276607365480054603, guid: 85a08fc2537086e49a4b913f84746976, type: 3}

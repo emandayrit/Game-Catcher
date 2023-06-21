@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class GameOverHandler : MonoBehaviour
+public class GameOver : MonoBehaviour
 {
-    [SerializeField] GameObject gameOverPanel;
     public bool IsGameOver;
+    [SerializeField] GameObject gameOverPanel;
 
     public void GameOverCall()
     {
@@ -12,5 +12,4 @@ public class GameOverHandler : MonoBehaviour
         gameOverPanel.SetActive(true);
         Time.timeScale = 0f;
     }
-    public void ReturnNormalSpeed() => Time.timeScale = 1f;
 }

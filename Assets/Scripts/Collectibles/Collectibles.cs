@@ -10,20 +10,31 @@ public class Collectibles : MonoBehaviour
     {
         if (_collider.gameObject.CompareTag("Player"))
         {
-            CheckCollisionTag(gameObject.tag, _collider);
-            collectible.PlayVFX(_collider.gameObject.transform);
+            string _tag = gameObject.tag;
+            Transform _playerTransform = _collider.gameObject.transform;
+
+            StartCollectedActions(_tag, _collider);
+            collectible.PlayVFX(_playerTransform);
         }
 
         Destroy(gameObject);
     }
 
-    void CheckCollisionTag(string _tag, Collision _collider)
+    void StartCollectedActions(string _tag, Collision _collider)
     {
         switch (_tag)
         {
-            case "Coin": SlowModifier(_collider); coinCollect?.Invoke(collectible.value); break;
-            case "Bomb": bombCollect?.Invoke(collectible.value); break;
-            default: break;
+            case "Coin":
+                SlowModifier(_collider);
+                coinCollect?.Invoke(collectible.value);
+                break;
+
+            case "Bomb":
+                bombCollect?.Invoke(collectible.value);
+                break;
+
+            default:
+                break;
         }
     }
 

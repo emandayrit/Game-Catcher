@@ -2,16 +2,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerLevelUp : MonoBehaviour
+public class LevelUp : MonoBehaviour
 {
     [SerializeField] int currentLevel;
     [SerializeField] int scoreToLevel;
     [SerializeField] GameObject levelUpPanel;
-    [SerializeField] ScoreHandler scoreHandler;
+    [SerializeField] PlayerStats player;
 
     void Update()
     {
-        if(scoreHandler.currentScore >= scoreToLevel)
+        if(player.currentScore >= scoreToLevel)
         {
             IncreaseScoreToLevel();
             LevelUpPanelStart();
