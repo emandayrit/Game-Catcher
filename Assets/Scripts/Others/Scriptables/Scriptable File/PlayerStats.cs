@@ -28,10 +28,10 @@ public class PlayerStats : ScriptableObject
     public void UpdateStatsOnLevelUp()
     {
         ++level;
-        scoreToLevel += currentScore;
+        scoreToLevel = 4 * level;
         currentHP = maxHP;
 
         moveSpeed = 1000;
-        currentScore = 0;
+        //currentScore = 0;
     }
 }

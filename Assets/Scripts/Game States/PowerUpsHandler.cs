@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
-public class PowerUps : MonoBehaviour
+public class PowerUpsHandler : MonoBehaviour
 {
     [SerializeField] PlayerStats player;
     [SerializeField] int totalPowerUps;
+
+    [SerializeField] List<TMP_Text> uiTexts;
+    public List<PowerUp> powerUps;
 
     public List<int> GetUniqueRandomNumber()
     {
@@ -27,7 +31,7 @@ public class PowerUps : MonoBehaviour
         return _digits;
     }
 
-    void GetPowerUpByNumbers(int _num)
+    public void GetPowerUpByNumbers(int _num)
     {
         switch (_num)
         {
@@ -47,22 +51,30 @@ public class PowerUps : MonoBehaviour
     {
         ++player.maxHP;
         player.currentHP = player.maxHP;
+        uiTexts[0].text = $"HP: {player.currentHP}";
+        uiTexts[1].text = $"Score: {player.currentScore}";
+        Debug.Log($"You selected More HP +1 Max HP!");
     }
 
     void ResetSpeedPowerUp()
     {
-        player.moveSpeed = 1000;
+        uiTexts[0].text = $"HP: {player.currentHP}";
+        uiTexts[1].text = $"Score: {player.currentScore}";
+        Debug.Log($"You selected Reset Speed!");
     }
 
     void BonusScorePowerUp()
     {
         player.currentScore += 3;
+        uiTexts[0].text = $"HP: {player.currentHP}";
+        uiTexts[1].text = $"Score: {player.currentScore}";
+        Debug.Log($"You selected More Score +3!");
     }
 
     void NoBombsPowerUp()
     {
         //put something here to disable bombs dropping.
-        Debug.Log("I'll do something next time. o_o ");
+        Debug.Log("I'll do something next time. o_o But Good Job!");
     }
 
 }

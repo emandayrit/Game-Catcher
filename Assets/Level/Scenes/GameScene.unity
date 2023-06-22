@@ -496,6 +496,14 @@ MonoBehaviour:
   levelUpPanel: {fileID: 34481982}
   powerUps: {fileID: 216638029}
   player: {fileID: 11400000, guid: 3d88eea37b55b0c4da946a8934b0e5f0, type: 2}
+  powerUpNames:
+  - {fileID: 2144465575}
+  - {fileID: 173541670}
+  - {fileID: 901459546}
+  powerUpImages:
+  - {fileID: 1686168518}
+  - {fileID: 990115045}
+  - {fileID: 210694560}
 --- !u!114 &216638029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -505,11 +513,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 216638026}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34703b1b4beec164680e3c4d42d8d546, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b660483b7acae14fb29fec130ffdb9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 11400000, guid: 3d88eea37b55b0c4da946a8934b0e5f0, type: 2}
   totalPowerUps: 4
+  uiTexts:
+  - {fileID: 627594925}
+  - {fileID: 686717641}
+  powerUps:
+  - {fileID: 11400000, guid: dc75235a0d224fd448de1f6667a4b70b, type: 2}
+  - {fileID: 11400000, guid: e3d228823de763e4eb5061990a5fa545, type: 2}
+  - {fileID: 11400000, guid: 5d4dde5a2ea7e7a42b3da49022c6dc89, type: 2}
+  - {fileID: 11400000, guid: 40c202ae7d3330b44be057cb8c80a0ec, type: 2}
 --- !u!1 &272516534
 GameObject:
   m_ObjectHideFlags: 0
