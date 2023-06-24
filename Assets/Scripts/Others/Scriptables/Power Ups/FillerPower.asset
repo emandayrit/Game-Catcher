@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffb0f35dcd29cf44094ea3269b7152fe, type: 3}
   m_Name: FillerPower
   m_EditorClassIdentifier: 
-  powerUpName: Social Credit [PH]
+  powerUpName: No Bombs [10s]
   powerUpImage: {fileID: 274194382, guid: 26f691fc093c6cc4fa9a667de2e3e680, type: 3}

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffb0f35dcd29cf44094ea3269b7152fe, type: 3}
   m_Name: MoreScore
   m_EditorClassIdentifier: 
-  powerUpName: Puzi Plz +3 Score
+  powerUpName: Gimme +3 Score
   powerUpImage: {fileID: 21300000, guid: a3bd79471ac4b304e8eef15052247074, type: 3}

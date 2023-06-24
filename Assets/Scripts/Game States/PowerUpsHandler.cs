@@ -6,6 +6,7 @@ using UnityEngine;
 public class PowerUpsHandler : MonoBehaviour
 {
     [SerializeField] PlayerStats player;
+    [SerializeField] Spawner spawner;
     [SerializeField] int totalPowerUps;
 
     [SerializeField] List<TMP_Text> uiTexts;
@@ -53,14 +54,12 @@ public class PowerUpsHandler : MonoBehaviour
         player.currentHP = player.maxHP;
         uiTexts[0].text = $"HP: {player.currentHP}";
         uiTexts[1].text = $"Score: {player.currentScore}";
-        Debug.Log($"You selected More HP +1 Max HP!");
     }
 
     void ResetSpeedPowerUp()
     {
         uiTexts[0].text = $"HP: {player.currentHP}";
         uiTexts[1].text = $"Score: {player.currentScore}";
-        Debug.Log($"You selected Reset Speed!");
     }
 
     void BonusScorePowerUp()
@@ -68,13 +67,12 @@ public class PowerUpsHandler : MonoBehaviour
         player.currentScore += 3;
         uiTexts[0].text = $"HP: {player.currentHP}";
         uiTexts[1].text = $"Score: {player.currentScore}";
-        Debug.Log($"You selected More Score +3!");
     }
 
     void NoBombsPowerUp()
     {
-        //put something here to disable bombs dropping.
-        Debug.Log("I'll do something next time. o_o But Good Job!");
+        spawner.SetNoBombsUI();
+        Debug.Log("No Bombs is selected.");
     }
 
 }

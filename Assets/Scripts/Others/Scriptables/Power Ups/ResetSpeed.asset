@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffb0f35dcd29cf44094ea3269b7152fe, type: 3}
   m_Name: ResetSpeed
   m_EditorClassIdentifier: 
-  powerUpName: Give Me Back Speed
+  powerUpName: Me want speed back
   powerUpImage: {fileID: 21300000, guid: f3bcb8616404be04bbe72c98721db2ae, type: 3}
